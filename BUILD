@@ -1,12 +1,14 @@
-
 genrule(
     name = "globalweather",
-    srcs = ["@wsdl//file"], # $<
+    srcs = ["@wsdl//file"],  # $<
     outs = ["globalweather.jar"],  # $@
     # Do not use an additional output directory, this confuses bazel more than it does good
     # cmd = "$(location @local_jdk//:wsimport) -clientjar $@ -d $(@D) $<",
     cmd = "$(location @local_jdk//:wsimport) -clientjar $@ $<",
-    tools = ["@local_jdk//:wsimport", "@local_jdk//:jdk-default"],
+    tools = [
+        "@local_jdk//:jdk-default",
+        "@local_jdk//:wsimport",
+    ],
 )
 
 java_test(

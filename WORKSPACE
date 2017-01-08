@@ -1,7 +1,7 @@
 http_file(
     name = "wsdl",
-    url = "http://www.webservicex.com/globalweather.asmx?WSDL",
     sha256 = "d64cb85eb33d8743a0f718bb963695c2794a41295b24398960ae29a2640a8a7c",
+    url = "http://www.webservicex.com/globalweather.asmx?WSDL",
 )
 
 # The following dependencies were calculated from:
