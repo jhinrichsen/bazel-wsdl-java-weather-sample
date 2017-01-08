@@ -1,7 +1,7 @@
 
 genrule(
     name = "globalweather",
-    srcs = ["globalweather.wsdl"], # $<
+    srcs = ["@wsdl//file"], # $<
     outs = ["globalweather.jar"],  # $@
     # Do not use an additional output directory, this confuses bazel more than it does good
     # cmd = "$(location @local_jdk//:wsimport) -clientjar $@ -d $(@D) $<",
