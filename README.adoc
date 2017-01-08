@@ -1,3 +1,5 @@
 # bazel-wsdl-java-weather-sample
 
 An example for a custom bazel rule (aka skylark) using Java (yuck) to call a weather webservice using WSDL
+
+Instead of being checked in to the repository, this example showcases fetching the WSDL remotely (secured by a SHA256 checksum) at build time. This procedure requires careful consideration, as it adds all kinds of runtime risks to the build: proxies, remote server availability e.a. 
